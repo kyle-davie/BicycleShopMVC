@@ -5,15 +5,7 @@
 }
 
 <h1>Bike Details</h1>
-
-
-@* Brand = "Trek",
-                  Model = "FX 1",
-                  Year = 2022,
-                  Type = "Hybrid",
-                  Price = 450.00m,
-                  Color = "Black",
-                  ImageFileName = "trek-fx1-black.jpg" *@
+<input type="hidden" value="@Model.Id" />
 <div class="row">
     <div class="col"></div>
     <div class="col">
@@ -26,6 +18,7 @@
                     <li class="list-group-item">@Model.Type</li>
                     <li class="list-group-item">@Model.Price?.ToString("C")</li>
                     <li class="list-group-item">@Model.Color</li>
+                    <li class="list-group-item"><a asp-controller="ShoppingCart" asp-action="AddToCart" asp-route-id="@Model.Id" class="btn btn-primary">Add To Cart</a></li>
                 </ul>
             </div>
         </div>

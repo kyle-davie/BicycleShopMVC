@@ -9,8 +9,9 @@ namespace MyShop.Models
         }
 
         public DbSet<Bicycle> Bicycles { get; set; }
+        public DbSet<Purchase> Purchases { get; set; }
 
-        protected override void OnModelCreating(ModelBuilder modelBuilder)
+		protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
 
